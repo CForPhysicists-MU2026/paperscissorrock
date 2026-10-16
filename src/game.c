@@ -5,7 +5,6 @@
 
 // own header
 #include "chartoint.h"
-#include "game.h"
 
 
 int CreatePlayerSelection()
@@ -30,7 +29,7 @@ int GenerateProgramSelection()
 
 void evaluate( int PlayerSelection, int ProgramSelection )
 {
-    int diff = ( PlayerSelection - ProgramSelection )%3;    // will be 1, if the player won, 0 in a draw and 2 if the computer won
+    int diff = ( 3 + PlayerSelection - ProgramSelection )%3;    // will be 1, if the player won, 0 in a draw and 2 if the computer won
 
     if( 1 == diff )
     {
